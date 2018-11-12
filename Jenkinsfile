@@ -5,17 +5,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                bat 'npm run build'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                bat 'node -v'
+                bat 'npm run test'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                bat 'ionic cordova build browser'
             }
         }
     }
