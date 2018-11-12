@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: beevelop/ionic
+    working_directory: ~/repo
     steps:
       - checkout
       - run:
@@ -12,4 +13,4 @@ jobs:
           name: Building android
           command: ionic cordova build android
       - store_artifacts:
-          path: platforms/android/build/outputs/apk/android-debug.apk
+          path: ~/repo/platforms/android/build/outputs/apk/android-debug.apk
