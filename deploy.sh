@@ -10,5 +10,5 @@ curl \
 -F "notes=$GIT_COMMIT_DESC" \
 -F "notes_type=0" \
 -F "ipa=@platforms/android/app/build/outputs/apk/debug/app-debug.apk" \
--H "X-HockeyAppToken: a37851f9edf7bd831a754cb5dec5a062e7bb6cc9" \
+-H "X-HockeyAppToken: 437c73a2815c4729b38ca152c5a76736" \
 https://rink.hockeyapp.net/api/2/apps/1b5edbbfbdb94a3a8eba43ef6a5f8f09/app_versions/upload
