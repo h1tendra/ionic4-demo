@@ -10,7 +10,25 @@ jobs:
           name: Install node modules
           command: npm install
       - run:
+          name: Check info
+          command: ionic info
+      - run:
+          name: List sdk info for android
+          command: $ANDROID_HOME/tools/bin/sdkmanager --list
+      - run:
+          name: Accept licence
+          command: echo y | $ANDROID_HOME/tools/bin/sdkmanager --update
+      - run:
           name: Building android
           command: ionic cordova build android
+      - run:
+          name: List sdk info for android
+          command: $ANDROID_HOME/tools/bin/sdkmanager --list
+      - run:
+          name: Check info
+          command: ionic info
       - store_artifacts:
           path: ~/repo/platforms/android/app/build/outputs/apk/debug/app-debug.apk
+      - run:
+          name: Deploy to hockey app
+          command: sh ./deploy.sh $CIRCLE_SHA1
