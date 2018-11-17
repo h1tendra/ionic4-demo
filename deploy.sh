@@ -11,4 +11,4 @@ curl \
 -F "notes_type=0" \
 -F "ipa=@platforms/android/app/build/outputs/apk/debug/app-debug.apk" \
 -H "X-HockeyAppToken: 437c73a2815c4729b38ca152c5a76736" \
-https://rink.hockeyapp.net/api/2/apps/1b5edbbfbdb94a3a8eba43ef6a5f8f09/app_versions/upload
+https://rink.hockeyapp.net/api/2/apps/0448f673abc04be1bcfe391162c6a362/app_versions/upload
